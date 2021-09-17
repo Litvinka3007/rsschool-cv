@@ -13,6 +13,41 @@
 </head>
 <body>
   <div class="container">
+    <header>
+      <div class="navigation-container">
+        <nav class="navbar" id="navbar">
+          <ul class="navigation">
+            <li><a href="#education" title="Education">Education</a></li>
+            <li><a href="#skills" title="Skills">Skills</a></li>
+            <li><a href="#languages" title="Languages">Languages</a></li>
+            <li><a href="#projects" title="Projects">Projects</a></li>
+            <li><a href="#experience" title="Experience">Experience</a></li>
+            <li><a href="#contacts" title="Contacts">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="gamburger">
+          <span class="open-slide">
+            <a href="#" onclick="openSlideMenu()">
+              <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#000000" stroke-width="5"/>
+                <path d="M0,14 30,14" stroke="#000000" stroke-width="5"/>
+                <path d="M0,23 30,23" stroke="#000000" stroke-width="5"/>
+              </svg>
+            </a>
+          </span>
+        </div>
+        <div id="side-menu" class="side-nav">
+          <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="#education" title="Education">Education</a>
+          <a href="#skills" title="Skills">Skills</a>
+          <a href="#languages" title=">Languages">Languages</a>
+          <a href="#projects" title="Projects">Projects</a>
+          <a href="#experience" title="Experience">Experience</a>
+          <a href="#contacts" title="Contacts">Contacts</a>
+        </div>
+      </div>
+    </header>
+
     <main class="cv-main">
       <div class="block-left cv-lightblue">
         <section class="cv-section cv-photoname cv-blue">
@@ -20,7 +55,7 @@
           <h2 class="cv-h1">Angelina Litvinovich</h2>
         </section>
 
-        <section class="cv-section cv-contacts">
+        <section class="cv-section cv-contacts" id="contacts">
           <h2 class="cv-h2">Contacts</h2>
           <ul class="contacts-list">
             <li class="contacts-item"><span class="contacts-item__type">Location:</span> Grodno, Belarus</li>
@@ -39,7 +74,7 @@
           </ul>
         </section>
 
-        <section class="cv-section cv-skills">
+        <section class="cv-section cv-skills" id="skills">
           <h2 class="cv-h2">Skills and expertise</h2>
           <ul class="cv-skills-list">
             <li class="cv-skills-item">HTML5</li>
@@ -63,7 +98,7 @@
           </div>
         </section>
 
-        <section class="cv-section cv-education">
+        <section class="cv-section cv-education" id="education">
           <h2 class="cv-h2">Education</h2>
 
           <h3 class="cv-h3 cv-university">Higher education</h3>
@@ -96,7 +131,7 @@
           </div>
         </section>
 
-        <section class="cv-section cv-english">
+        <section class="cv-section cv-english" id="languages">
           <h2 class="cv-h2">Languages</h2>
           <ul class="cv-text">
             <li class="cv-text-item"><img class="cv-screenshot" src="images/english_level.png" alt="English level"></li>
@@ -107,7 +142,7 @@
           </ul>
         </section>
 
-        <section class="cv-section cv-projects">
+        <section class="cv-section cv-projects" id="projects">
           <h2 class="cv-h2">Pet-projects</h2>
           <div class="cv-projects-items">
             <div class="cv-projects-item">
@@ -141,7 +176,7 @@
           </div>
         </section>
 
-        <section class="cv-section cv-experience">
+        <section class="cv-section cv-experience" id="experience">
           <h2 class="cv-h2">Experience</h2>
           <div class="cv-table">
             <div class="cv-table-row">
@@ -177,5 +212,8 @@
       </div>
     </footer>
   </div>
+
+  <script src="scripts/side-menu.js"></script>
+  <script src="scripts/smooth-transition.js"></script>
 </body>
 </html>
