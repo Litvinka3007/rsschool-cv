@@ -200,9 +200,18 @@ body {
   height: auto;
 }
 
-.cv-codeblock {
-  overflow: auto;
-  margin: 10px;
+pre {
+  width: 100%;
+  padding-left: 0;
+  white-space: normal;
+}
+
+pre code {
+  white-space: pre-wrap;
+}
+
+pre code.hljs {
+  padding: 2em;
 }
 
 .cv-h3 .cv-university {
