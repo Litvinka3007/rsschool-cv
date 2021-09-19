@@ -37,6 +37,103 @@ body {
   border-bottom: 5px solid #B0C4DEFF;
 }
 
+/*NAVIGATION*/
+
+.navigation-container {
+  background-color: #DBE1F3FF;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  background-color: #DBE1F3FF;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+.navigation-container .navigation li {
+  display: inline-block;
+  padding: 5px 15px 5px 15px;
+  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.navigation-container .navigation a {
+  text-decoration: none;
+  color: #010000;
+}
+
+/*MOBILE NAVIGATION*/
+
+.gamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  padding: 1rem 0 0 1rem;
+}
+
+.side-nav {
+  height: 100vh;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #DBE1F3FF;
+  opacity: .9;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 300;
+}
+
+.side-nav a {
+  padding: 10px 10px 10px 30px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #000000;
+  display: block;
+}
+
+.side-nav a:hover {
+  font-weight: bold;
+  color: #4A179AFF;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.side-nav .btn-close {
+  position: absolute;
+  top: 0;
+  right: 22px;
+  font-size: 36px;
+  margin-left: 50px;
+  color: #000000;
+}
+
+.side-nav .btn-close:hover  {
+  color: #4A179AFF;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
 /* LEFT BLOCK */
 
 .cv-photoname {
@@ -103,9 +200,18 @@ body {
   height: auto;
 }
 
-.cv-codeblock {
-  overflow: auto;
-  margin: 10px;
+pre {
+  width: 100%;
+  padding-left: 0;
+  white-space: normal;
+}
+
+pre code {
+  white-space: pre-wrap;
+}
+
+pre code.hljs {
+  padding: 2em;
 }
 
 .cv-h3 .cv-university {
@@ -160,6 +266,16 @@ body {
     -webkit-box-shadow: -5px 5px 20px 5px rgba(34, 60, 80, 0.3);
     -moz-box-shadow: -5px 5px 20px 5px rgba(34, 60, 80, 0.3);
     box-shadow: -5px 5px 20px 5px rgba(34, 60, 80, 0.3);
+  }
+
+  .gamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navigation a, .navigation, .navbar {
+    display: none;
   }
 }
 
